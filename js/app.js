@@ -90,6 +90,24 @@ if (header_search) {
   });
 }
 
+const katSort = new Select_Item({
+  itemClass: ".sort.select-item",
+});
+
+if (katSort) {
+  const header_search_trigger = katSort.getTriger();
+
+  header_search_trigger.onclick = () => {
+    katSort.getStatus() ? katSort.close() : katSort.open();
+  };
+  document.addEventListener("click", function (event) {
+    const isClickInside = katSort.getEl().contains(event.target);
+    if (!isClickInside) {
+      katSort.close();
+    }
+  });
+}
+
 let cardItems = [
   {
     img: "./media/imgs/bgs/k2.png",
@@ -229,6 +247,22 @@ cardCloser.forEach((el) => {
 const addToCardItems = document.querySelectorAll('.popular .wrapper .item');
 
 addToCardItems.forEach((el) =>{
+  const addToCardBtn = el.querySelector('.add-to-card');
+  const img = el.getAttribute('data-img');
+  const name = el.getAttribute('data-name');
+  const art = el.getAttribute('data-art');
+  const price = el.getAttribute('data-price');
+  const saleprice = el.getAttribute('data-saleprice');
+  const size = el.getAttribute('data-size');
+  addToCardBtn.onclick = ()=>{
+    card.addItem(img, name, art, price, saleprice, size)
+  }
+})
+
+
+const addToCardItemskatalog = document.querySelectorAll('.main-wrapper .item');
+
+addToCardItemskatalog.forEach((el) =>{
   const addToCardBtn = el.querySelector('.add-to-card');
   const img = el.getAttribute('data-img');
   const name = el.getAttribute('data-name');
