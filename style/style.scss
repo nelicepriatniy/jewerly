@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
     font-family: 'Evolventa';
@@ -8,6 +8,7 @@
 
 $font-family: "Montserrat", sans-serif;
 $second-family: "Evolventa", sans-serif;
+$font3: "Commissioner", sans-serif;
 
 
 *{
@@ -36,9 +37,12 @@ body {
 
 
 header {
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 12;
     padding: 20rem 0;
+    top: 0;
+    left: 0;
     background: white;
     .container {
         display: flex;
@@ -208,11 +212,41 @@ header {
             cursor: pointer;
         }
     }
+    .header-card {
+        cursor: pointer;
+        position: relative;
+        &.noEmpty {
+            &::after {
+                content: '';
+                display: block;
+                width: 10rem;
+                height: 10rem;
+                background: white;
+                border-radius: 50%;
+                position: absolute;
+                top: -2rem;
+                left: 10rem;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 8rem;
+                height: 8rem;
+                background: #ff582f;
+                border-radius: 50%;
+                position: absolute;
+                top: -1rem;
+                left: 11rem;
+                z-index: 2;
+            }
+        }
+    }
 
 }
 
 .hero {
     position: relative;
+    margin-top: 89rem;
     .container {
         padding: 215rem 0 100rem;
         display: flex;
@@ -602,4 +636,247 @@ footer {
             color: #acb2b9;
         }
     }
+}
+
+.card {
+    box-shadow: -16rem 0 19rem -11rem rgba(56, 37, 13, 0.15);
+    background: #f5f5f5;
+    position: fixed;
+    right: 0;
+    top: 89rem;
+    height: calc(100vh - 89rem);
+    transition: all .4s ease;
+    transform: translateX(100%);
+    z-index: 12;
+    padding: 25rem 30rem;
+    width: 500rem;
+    &.active {
+        transform: translateX(0);
+    }
+    .card-close {
+        cursor: pointer;
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        top: 16rem;
+        right: 16rem;
+        svg {
+            width: 100%;
+        }
+
+    }
+    .card-heading {
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 16rem;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #262628;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 25rem;
+        gap: 15rem;
+    }
+    .item {
+        padding: 8rem;
+        width: 100%;
+        display: flex;
+        gap: 20rem;
+        transition: all .4s ease;
+            border: 1px solid #e3c49b00;
+        &:hover {
+            border: 1px solid #e3c49b;
+        }
+        img {
+            width: 105rem;
+            height: 105rem;
+            object-fit: cover;
+        }
+    }
+    .info {
+        width: 100%;
+        .item_heading {
+            font-family: $font-family;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+            color: #3d3f46;
+        }
+        .acticle {
+            margin-top: 2rem;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 130%;
+            color: #878f99;
+        }
+        .prise {
+            font-family: $second-family;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 112%;
+            color: #3d3f46;
+            margin-top: 8rem;
+            span {
+                font-family: $second-family;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 120%;
+                text-decoration: line-through;
+                color: #929eba;
+            }
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 8rem;
+            min-width: 100%;
+        }
+        .size {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            color: #878f99;
+            span {
+                font-family: $font-family;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 130%;
+                color: #262628;
+            }
+        }
+        .delete {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 13px;
+            color: #3d3f46;
+            cursor: pointer;
+            transition: all .4s ease;
+            &:hover {
+                color: #ff582f;
+            }
+        }
+    }
+    .itog {
+        width: 100%;
+        padding-top: 15rem;
+        margin-top: 20rem;
+        border-top: 1px solid #acb2b9;
+        .kol-tov {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 130%;
+            color: #3d3f46;
+        }
+        .row {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .summ {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 130%;
+            color: #878f99;
+            width: fit-content;
+        }
+        .line {
+            flex: 1;
+            border-bottom: 1px dashed #acb2b9;
+
+        }
+        .sum-num {
+            font-family: $second-family;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 112%;
+            color: #3d3f46;
+            width: fit-content;
+        }
+    }
+    .buttons {
+        margin-top: 30rem;
+        * {
+            cursor: pointer;
+        }
+        .go-to-card {
+            padding: 10px 62px;
+            background: #3d3f46;
+            font-family: $font-family;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #f8fafd;
+            width: 100%;
+        }
+        .close-card {
+            margin-top: 15rem;
+            border: 1px solid #3d3f46;
+            background: #f5f5f5;
+            padding: 10px 62px;
+            width: 100%;
+            font-family: $font-family;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #3d3f46;
+        }
+    }
+}
+
+.closePupups {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(61, 63, 70, 0.24);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.bred-crumbs {
+    margin-top: 105rem;
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+    .link {
+        font-family: $font3;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 110%;
+        color: #818b9e;
+    }
+    .slash {
+        font-family: $font3;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: #e3c49b;
+    }
+    .now {
+        font-family: $font3;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 110%;
+        color: #929eba;
+    } 
 }

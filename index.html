@@ -13,7 +13,7 @@
     <header>
         <div class="container">
             <nav class="header-nav">
-                <a href="">
+                <a href="./catalog.html">
                     <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.33333 3.5H3.88889C3.39797 3.5 3 3.89797 3 4.38889V8.83333C3 9.32425 3.39797 9.72222 3.88889 9.72222H8.33333C8.82425 9.72222 9.22222 9.32425 9.22222 8.83333V4.38889C9.22222 3.89797 8.82425 3.5 8.33333 3.5Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M18.1111 3.5H13.6667C13.1757 3.5 12.7778 3.89797 12.7778 4.38889V8.83333C12.7778 9.32425 13.1757 9.72222 13.6667 9.72222H18.1111C18.602 9.72222 19 9.32425 19 8.83333V4.38889C19 3.89797 18.602 3.5 18.1111 3.5Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -49,7 +49,7 @@
                         </div>
                     </a>
                 </div>
-                <a href="" class="line">
+                <a class="line openCard header-card">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.6667 9.16658C14.6667 10.139 14.2804 11.0717 13.5927 11.7593C12.9051 12.4469 11.9725 12.8333 11 12.8333C10.0275 12.8333 9.09491 12.4469 8.40728 11.7593C7.71964 11.0717 7.33333 10.139 7.33333 9.16658M2.84442 5.53109H19.1556M3.11667 5.01134C2.87866 5.32868 2.75 5.71466 2.75 6.11133V18.3333C2.75 18.8195 2.94315 19.2858 3.28697 19.6296C3.63079 19.9734 4.0971 20.1666 4.58333 20.1666H17.4167C17.9029 20.1666 18.3692 19.9734 18.713 19.6296C19.0568 19.2858 19.25 18.8195 19.25 18.3333V6.11133C19.25 5.71466 19.1213 5.32868 18.8833 5.01134L17.05 2.56659C16.8792 2.33889 16.6578 2.15409 16.4032 2.0268C16.1487 1.89952 15.8679 1.83325 15.5833 1.83325H6.41667C6.13205 1.83325 5.85134 1.89952 5.59678 2.0268C5.34221 2.15409 5.12077 2.33889 4.95 2.56659L3.11667 5.01134Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
@@ -82,6 +82,25 @@
             </nav>
         </div>
     </header>
+
+    <div class="card">
+        <div class="card-close closeCard">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.5 5.5L5.5 16.5M5.5 5.5L16.5 16.5" stroke="#465767" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="card-heading">Товар добавлен в корзину</div>
+        <div class="wrapper">
+        </div>
+        <div class="itog">
+            <p class="kol-tov">2 товара</p>
+            <div class="row"><p class="summ">Сумма заказа:</p> <div class="line"></div><p class="sum-num" data-sum="15 380">15 380 ₽</p></div>
+        </div>
+        <div class="buttons">
+            <button class="go-to-card">Перейти к оформлению</button>
+            <button class="close-card closeCard">Продолжить покупки</button>
+        </div>
+    </div>
 
     <main>
         <section class="hero">
@@ -203,14 +222,14 @@
                         </div>
                     </a>
                 </div>
-                <a class="perehod" href="">Перейти в каталог</a>
+                <a class="perehod" href="./catalog.html">Перейти в каталог</a>
             </div>
         </section>
         <section class="popular">
             <div class="container">
                 <h2 class="section-heading">Популярные изделия</h2>
                 <div class="wrapper">
-                    <div class="item">
+                    <div class="item" data-art="123" data-img="./media/imgs/bgs/p1.png" data-size="21" data-name="название 1" data-price="81901" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p1.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -224,7 +243,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-art="1233" data-img="./media/imgs/bgs/p2.png" data-size="21" data-name="название 2" data-price="81902" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p2.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -238,7 +257,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-art="121" data-img="./media/imgs/bgs/p3.png" data-size="21" data-name="название 3" data-price="81903" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p3.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -252,7 +271,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-art="122" data-img="./media/imgs/bgs/p1.png" data-size="21" data-name="название 4" data-price="81904" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p1.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -266,7 +285,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-art="1211" data-img="./media/imgs/bgs/p2.png" data-size="21" data-name="название 5" data-price="81905" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p2.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -280,7 +299,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-art="1212" data-img="./media/imgs/bgs/p3.png" data-size="21" data-name="название 6" data-price="81906" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p3.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -294,7 +313,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-art="12123" data-img="./media/imgs/bgs/p1.png" data-size="21" data-name="название 7" data-price="81907" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p1.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -308,7 +327,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-art="12312332" data-img="./media/imgs/bgs/p2.png" data-size="21" data-name="название 7" data-price="81908" data-saleprice="12190">
                         <img src="./media/imgs/bgs/p2.png" alt="" class="item-img">
                         <div class="item-btm">
                             <p class="item-heading">Название изделия</p>
@@ -323,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="perehod" href="">Перейти в каталог</a>
+                <a class="perehod" href="./catalog.html">Перейти в каталог</a>
             </div>
         </section>
     </main>
@@ -381,6 +400,8 @@
             </div>
         </div>
     </footer>
+
+    <div class="closePupups closeCard"></div>
 
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
