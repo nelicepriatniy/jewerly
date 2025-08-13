@@ -876,6 +876,11 @@ footer .footer-btm a {
 .catalog-hero .filters .item.active .open-btn::before {
   transform: translate(-50%, -50%) rotate(0);
 }
+.catalog-hero .filters .item.active .list, .catalog-hero .filters .item.active .more {
+  max-height: 500rem;
+  overflow-y: scroll;
+  margin-top: 16rem;
+}
 .catalog-hero .filters .item .heading {
   font-family: "Evolventa", sans-serif;
   font-weight: 700;
@@ -887,7 +892,7 @@ footer .footer-btm a {
   display: flex;
   align-items: center;
   gap: 10rem;
-  margin-bottom: 15rem;
+  cursor: pointer;
 }
 .catalog-hero .filters .item .open-btn {
   width: 24rem;
@@ -919,16 +924,28 @@ footer .footer-btm a {
   position: absolute;
 }
 .catalog-hero .filters .item .list {
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 10rem;
   padding: 0 2rem;
+  transition: all 0.4s ease;
 }
 .catalog-hero .filters .item .list label {
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 15rem;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.catalog-hero .filters .item .list label.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
 }
 .catalog-hero .filters .item .list label p {
   font-family: "Montserrat", sans-serif;
@@ -965,7 +982,14 @@ footer .footer-btm a {
           text-decoration-skip-ink: none;
   color: #3d3f46;
   background: none;
-  margin-top: 12rem;
+  margin-top: 0;
+  transition: all 0.4s ease;
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+.catalog-hero .filters .item .more.disable {
+  display: none;
 }
 .catalog-hero .akcia {
   border: 1rem solid #dba052;
@@ -1093,8 +1117,7 @@ footer .footer-btm a {
   background: white;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: 100rem;
+  transform: translateY(-50%) translateX(183rem);
   z-index: 3;
   cursor: pointer;
 }
@@ -1227,6 +1250,9 @@ footer .footer-btm a {
   padding: 16rem 16rem 18rem 16rem;
   border: 1rem solid #fbd7a8;
 }
+.catalog-hero .main-wrapper .item.disable {
+  display: none;
+}
 .catalog-hero .main-wrapper .item:hover {
   z-index: 2;
 }
@@ -1320,6 +1346,7 @@ footer .footer-btm a {
   max-width: 100%;
   justify-content: center;
   margin-left: 200rem;
+  margin-top: 20rem;
 }
 .catalog-hero .paginations .prev, .catalog-hero .paginations .next {
   padding: 8rem 12rem;

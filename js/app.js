@@ -108,6 +108,50 @@ if (katSort) {
   });
 }
 
+const katalog_filters_items = document.querySelectorAll('.catalog-hero .filters .item');
+
+if(katalog_filters_items.length > 0) {
+  katalog_filters_items.forEach((el) =>{
+
+    const elTriger = el.querySelector('.heading')
+    const moreItemsBtn = el.querySelector('.more');
+    const shag = 2;
+    let startIndex = 7
+
+    elTriger.onclick = ()=>{
+      el.classList.toggle('active')
+    }
+
+    const elItems = el.querySelectorAll('label');
+    if(elItems.length > startIndex) {
+      for(let i = 0; i < startIndex; i++) {
+        elItems[i].classList.add('active')
+      }
+      moreItemsBtn.onclick = ()=>{
+        if(startIndex + shag < elItems.length) {
+          startIndex = startIndex + shag;
+          for(let i = 0; i < startIndex; i++) {
+            elItems[i].classList.add('active')
+          }
+        } else {
+          startIndex = elItems.length
+          for(let i = 0; i < startIndex; i++) {
+            elItems[i].classList.add('active')
+          }
+          moreItemsBtn.classList.add('disable')
+        }
+
+      }
+
+    } else {
+      moreItemsBtn.classList.add('disable')
+      elItems.forEach((elItem)=>{
+        elItem.classList.add('active')
+      })
+    }
+  })
+}
+
 let cardItems = [
   {
     img: "./media/imgs/bgs/k2.png",
@@ -275,3 +319,287 @@ addToCardItemskatalog.forEach((el) =>{
   }
 })
 
+
+
+const price_katalog_min = 0;       // минимально возможная цена
+const price_katalog_max = 100000;   // максимально возможная цена
+const katalog_line_end_offset = 14;// отступ правого бегунка от края (px)
+
+const katalog_price_el = document.querySelector('.catalog-hero .filters .price');
+
+if (katalog_price_el) {
+  const katalog_line = katalog_price_el.querySelector('.line');
+  const katalog_line_start = katalog_line.querySelector('.start');
+  const katalog_line_end = katalog_line.querySelector('.end');
+
+  let isDragging = false;
+  let activeHandle = null;
+
+  // Эффективная ширина (с учетом отступа справа)
+  const getEffectiveWidth = () => Math.max(0, katalog_line.offsetWidth - katalog_line_end_offset);
+
+  // Позиция курсора в пределах линии (0..effectiveWidth)
+  function getPositionWithinLine(clientX) {
+    const rect = katalog_line.getBoundingClientRect();
+    let pos = clientX - rect.left;
+    const maxPos = getEffectiveWidth();
+    return Math.max(0, Math.min(pos, maxPos));
+  }
+
+  // Позиция -> цена (нормируем на effectiveWidth)
+  function positionToPrice(pos) {
+    const w = getEffectiveWidth();
+    if (w <= 0) return price_katalog_max; // защита от деления на 0
+    const percent = Math.max(0, Math.min(1, pos / w));
+    return Math.round(price_katalog_min + percent * (price_katalog_max - price_katalog_min));
+  }
+
+  // Обновление позиции бегунков с ограничениями
+  function updateHandlePosition(handle, pos) {
+    const w = getEffectiveWidth();
+    const startPos = parseFloat(katalog_line_start.dataset.pos ?? 0);
+    const endPos   = parseFloat(katalog_line_end.dataset.pos   ?? w);
+
+    if (handle === katalog_line_start) {
+      pos = Math.min(Math.max(0, pos), endPos);      // 0 .. endPos
+      katalog_line_start.dataset.pos = pos;
+      katalog_line_start.style.transform = `translateX(${pos}px) translateY(-50%)`;
+    } else if (handle === katalog_line_end) {
+      pos = Math.max(pos, startPos);                 // startPos .. w
+      pos = Math.min(pos, w);
+      katalog_line_end.dataset.pos = pos;
+      katalog_line_end.style.transform = `translateX(${pos}px) translateY(-50%)`;
+    }
+
+    // Текущие цены
+    const minPrice = positionToPrice(parseFloat(katalog_line_start.dataset.pos));
+    const maxPrice = positionToPrice(parseFloat(katalog_line_end.dataset.pos));
+
+    // console.log(`Диапазон цен: ${minPrice} — ${maxPrice}`);
+    const priceEndInput = document.querySelector('.catalog-hero .filters .price-end');
+    document.querySelector('.catalog-hero .filters .price-start').value = minPrice;
+    priceEndInput.dispatchEvent(new Event('input'));
+    const priceStartInput = document.querySelector('.catalog-hero .filters .price-end');
+    document.querySelector('.catalog-hero .filters .price-end').value = maxPrice;
+    priceStartInput.dispatchEvent(new Event('input'));
+  }
+
+  // Старт drag
+  function startDrag(handle, clientX) {
+    isDragging = true;
+    activeHandle = handle;
+    updateHandlePosition(handle, getPositionWithinLine(clientX));
+  }
+
+  // Move
+  function moveDrag(clientX) {
+    if (!isDragging || !activeHandle) return;
+    updateHandlePosition(activeHandle, getPositionWithinLine(clientX));
+  }
+
+  // Конец drag
+  function endDrag() {
+    isDragging = false;
+    activeHandle = null;
+  }
+
+  // Мышь
+  [katalog_line_start, katalog_line_end].forEach(handle => {
+    handle.addEventListener('mousedown', e => {
+      e.preventDefault();
+      startDrag(handle, e.clientX);
+    });
+  });
+  document.addEventListener('mousemove', e => moveDrag(e.clientX));
+  document.addEventListener('mouseup', endDrag);
+
+  // Тач
+  [katalog_line_start, katalog_line_end].forEach(handle => {
+    handle.addEventListener('touchstart', e => {
+      const t = e.touches[0];
+      startDrag(handle, t.clientX);
+    }, { passive: false });
+  });
+  document.addEventListener('touchmove', e => {
+    const t = e.touches[0];
+    moveDrag(t.clientX);
+  }, { passive: false });
+  document.addEventListener('touchend', endDrag);
+
+  // Инициализация позиций (весь диапазон: 0 .. effectiveWidth)
+  const init = () => {
+    const w = getEffectiveWidth();
+    katalog_line_start.dataset.pos = 0;
+    katalog_line_end.dataset.pos   = w;
+    katalog_line_start.style.transform = `translateX(0px) translateY(-50%)`;
+    katalog_line_end.style.transform   = `translateX(${w}px) translateY(-50%)`;
+  };
+
+  // Инициализация после отрисовки
+  requestAnimationFrame(init);
+
+  // (Опционально) Пересчет при ресайзе, чтобы диапазон не "уплывал"
+  window.addEventListener('resize', init);
+}
+
+
+const katsFilsers = document.querySelector('.catalog-hero .filters');
+
+if (katsFilsers) {
+
+  const tags = document.querySelector('.catalog-hero .items-wrapper .tags');
+  const allItems = document.querySelectorAll('.catalog-hero .items-wrapper .main-wrapper .item');
+
+
+  const priceStart = document.querySelector('.price-mid .price-start')
+  const priceEnd = document.querySelector('.price-mid .price-end')
+
+  const akciaInput = katsFilsers.querySelector('.akcia input')
+
+  akciaInput.onchange = ()=>{
+    reclassesWrapperItems(allItems)
+  }
+  priceStart.addEventListener('input', ()=>{
+    console.log(123);
+    
+  })
+  priceEnd.oninput = ()=>{
+    reclassesWrapperItems(allItems)
+  }
+
+  const katsFilsersKat = katsFilsers.querySelectorAll('[name="kat"]');
+  let katFiltersKatList = [];
+  const katsFilsersKam = katsFilsers.querySelectorAll('[name="kam"]');
+  let katFiltersKamList = [];
+  const katsFilsersZnak = katsFilsers.querySelectorAll('[name="znak"]');
+  let katFiltersZnakList = [];
+  let allFilters = katFiltersKatList.concat(katFiltersKamList, katFiltersZnakList);
+
+  // Функция для обновления рендеринга и кликов
+  function renderSingleTag(text) {
+    return `
+      <div class="item" data-inp-val="${text}">
+          ${text}
+          <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.25 4.25L3.75 11.75M3.75 4.25L11.25 11.75" stroke="#878F99"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+      </div>
+    `;
+  }
+
+  function renderTag(mass, elem) {
+    elem.innerHTML = '';
+    mass.forEach((el) => {
+      elem.insertAdjacentHTML('beforeend', renderSingleTag(el));
+    });
+    // Повторное назначение обработчиков после перерисовки
+    elem.querySelectorAll('.item').forEach((tagEl) => {
+      tagEl.addEventListener('click', () => {
+        const val = tagEl.getAttribute('data-inp-val');
+        katFiltersKatList = katFiltersKatList.filter(v => v !== val);
+        katFiltersKamList = katFiltersKamList.filter(v => v !== val);
+        katFiltersZnakList = katFiltersZnakList.filter(v => v !== val);
+
+        // Снимаем чекбоксы, если они соответствуют тегу
+        katsFilsers.querySelectorAll(`input[value="${val}"]`).forEach(inp => inp.checked = false);
+
+        allFilters = katFiltersKatList.concat(katFiltersKamList, katFiltersZnakList);
+        renderTag(allFilters, tags);
+        console.log(allFilters);
+        reclassesWrapperItems(allItems)
+      });
+    });
+  }
+
+  function updateFiltersAndRender() {
+    allFilters = katFiltersKatList.concat(katFiltersKamList, katFiltersZnakList);
+    renderTag(allFilters, tags);
+  }
+
+  // Обработка кат
+  katsFilsersKat.forEach((el) => {
+    if (el.checked) katFiltersKatList.push(el.value);
+    el.addEventListener('click', () => {
+      if (el.checked) {
+        katFiltersKatList.push(el.value);
+      } else {
+        katFiltersKatList = katFiltersKatList.filter(v => v !== el.value);
+      }
+      updateFiltersAndRender();
+      reclassesWrapperItems(allItems)
+    });
+  });
+
+  // Обработка кам
+  katsFilsersKam.forEach((el) => {
+    if (el.checked) katFiltersKamList.push(el.value);
+    el.addEventListener('click', () => {
+      if (el.checked) {
+        katFiltersKamList.push(el.value);
+      } else {
+        katFiltersKamList = katFiltersKamList.filter(v => v !== el.value);
+      }
+      updateFiltersAndRender();
+      reclassesWrapperItems(allItems)
+    });
+  });
+
+  // Обработка знак
+  katsFilsersZnak.forEach((el) => {
+    if (el.checked) katFiltersZnakList.push(el.value);
+    el.addEventListener('click', () => {
+      if (el.checked) {
+        katFiltersZnakList.push(el.value);
+      } else {
+        katFiltersZnakList = katFiltersZnakList.filter(v => v !== el.value);
+      }
+      updateFiltersAndRender();
+      reclassesWrapperItems(allItems)
+    });
+  });
+
+  // Первичная отрисовка
+  if (tags) {
+    const allTags = katFiltersKatList.concat(katFiltersKamList, katFiltersZnakList);
+    renderTag(allTags, tags);
+  }
+function reclassesWrapperItems(elems){
+  elems.forEach((el)=>{
+    const elKat = el.getAttribute('data-kat')
+    const elKam = el.getAttribute('data-kam')
+    const elKznak = el.getAttribute('data-znak')
+    const elSale = el.getAttribute('data-akcia')
+    const elPrice = el.getAttribute('data-price')
+
+    // Проверяем каждый фильтр. Если список фильтров пустой — считаем, что все элементы проходят
+    const elKatShow = katFiltersKatList.length === 0 || katFiltersKatList.includes(elKat)
+    const elKamShow = katFiltersKamList.length === 0 || katFiltersKamList.includes(elKam)
+    const elZnakShow = katFiltersZnakList.length === 0 || katFiltersZnakList.includes(elKznak)
+
+    let elAkciaShow = true
+    if(akciaInput.checked) {
+      elAkciaShow = !!elSale
+    }
+
+    let elPriceShow = true
+    if(priceStart.value || priceEnd.value) {
+      const price = Number(elPrice)
+      const start = Number(priceStart.value) || 0
+      const end = Number(priceEnd.value) || Infinity
+      elPriceShow = price >= start && price <= end
+    }
+
+    // Если элемент проходит все фильтры — показываем, иначе скрываем
+    if(elKatShow && elKamShow && elZnakShow && elAkciaShow && elPriceShow) {
+      el.classList.remove('disable')
+    } else {
+      el.classList.add('disable')
+    }
+  })
+}
+
+  reclassesWrapperItems(allItems)
+
+}
