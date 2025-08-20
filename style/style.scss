@@ -1192,7 +1192,7 @@ footer {
     .kol-vo-tov {
         font-family: $font-family;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 15rem;
         color: #3d3f46;
     }
     .sort-block {
@@ -1205,7 +1205,7 @@ footer {
     .sort-heading {
         font-family: $font-family;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 15rem;
         color: #3d3f46;
     }
     .select-item {
@@ -1269,13 +1269,13 @@ footer {
         gap: 10rem;
         margin-top: 16rem;
         .item {
-            border: 1px solid #c7cacf;
-            padding: 4px 12px;
+            border: 1rem solid #c7cacf;
+            padding: 4rem 12rem;
             background: white;
             transition: all .4s ease;
             font-family: $font-family;
             font-weight: 400;
-            font-size: 15px;
+            font-size: 15rem;
             text-align: center;
             color: #3d3f46;
             display: flex;
@@ -1435,7 +1435,7 @@ footer {
             padding: 5rem 15rem;
             font-family: $font-family;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 16rem;
             line-height: 138%;
             color: #2c343d;
             border-bottom: 1rem solid #dba05200;
@@ -1522,7 +1522,7 @@ footer {
         h1 {
             font-family: $font-family;
             font-weight: 600;
-            font-size: 22px;
+            font-size: 22rem;
             line-height: 130%;
             color: #37393f;
         }
@@ -1530,7 +1530,7 @@ footer {
             margin-top: 2rem;
             font-family: $font-family;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 14rem;
             line-height: 130%;
             color: #37393f;
         }
@@ -1539,13 +1539,13 @@ footer {
         margin-top: 24rem;
         font-family: $second-family;
         font-weight: 700;
-        font-size: 28px;
+        font-size: 28rem;
         line-height: 112%;
         color: #3d3f46;
         span {
             font-family: $second-family;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 20rem;
             line-height: 120%;
             text-decoration: line-through;
             color: #929eba;
@@ -1560,13 +1560,13 @@ footer {
     }
     .add-to-card {
         width: fit-content;
-        padding: 10px 0;
+        padding: 10rem 0;
         background: #3d3f46;
         width: 100%;
         max-width: 320rem;
         font-family: $font-family;
         font-weight: 600;
-        font-size: 13px;
+        font-size: 13rem;
         text-transform: uppercase;
         color: #f8fafd;
         display: flex;
@@ -1580,33 +1580,33 @@ footer {
     .buy-now {
         font-family: $font-family;
         font-weight: 600;
-        font-size: 13px;
+        font-size: 13rem;
         text-transform: uppercase;
         color: #3d3f46;
-        border: 1px solid #3d3f46;
-        padding: 10px 62px;
+        border: 1rem solid #3d3f46;
+        padding: 10rem 62rem;
         background: none;
     }
     .dostavka {
         margin-top: 20rem;
         font-family: $second-family;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 14rem;
         line-height: 145%;
         text-transform: uppercase;
         color: #3d3f46;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 0px;
+        padding: 10rem 0rem;
         background: #f5f5f5;
         gap: 10rem;
     }
     .characts {
         padding: 25rem 0;
         margin: 30rem 0;
-        border-top: 1px solid #c7cacf;
-        border-bottom: 1px solid #c7cacf;
+        border-top: 1rem solid #c7cacf;
+        border-bottom: 1rem solid #c7cacf;
         display: flex;
         flex-direction: column;
         gap: 10rem;
@@ -1615,29 +1615,582 @@ footer {
             justify-content: space-between;
             .line {
                 flex: 1;
-                border-bottom: 1px dashed #acb2b9;
+                border-bottom: 1rem dashed #acb2b9;
             }
         }
     }
     .characts_heading {
         font-family: $font-family;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 15rem;
         line-height: 130%;
         color: #878f99;
     }
     .characts_text {
         font-family: $font-family;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 15rem;
         line-height: 130%;
         color: #262628;
     }
     .deskription {
         font-family: $font-family;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 14rem;
         line-height: 130%;
         color: #37393f;
+    }
+}
+
+.paymentPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+    background: white;
+    padding: 35rem 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 12;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .payment-popup-close {
+        position: absolute;
+        top: 15rem;
+        right: 15rem;
+        width: 20rem;
+        cursor: pointer;
+    }
+    .heading {
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 18rem;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #3d3f46;
+        width: 100%;
+        text-align: center;
+    }
+    .row {
+        display: flex;
+        gap: 25rem;
+        margin-top: 25rem;
+        .item {
+            padding: 10rem 60rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.applepay {
+                background: #007aff;
+            }
+            &.gpay {
+                background: #262628;
+            }
+            &.paypal {
+                background: #ffc439;
+            }
+        }
+        &.catds {
+            margin-top: 20rem;
+            gap: 12rem;
+            background: #f5f5f5;
+            width: fit-content;
+        }
+    }
+    .or {
+        display: flex;
+        width: 100%;
+        margin-top: 30rem;
+        align-items: center;
+        gap: 10rem;
+        margin-bottom: 25rem;
+        p {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: #63656b;
+        }
+        .line {
+            flex: 1;
+            height: 1rem;
+            background: #ACB2B9;
+        }
+    }
+    .go-to-cart {
+        border: 1rem solid #3d3f46;
+        padding: 10rem 60rem;
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 13rem;
+        text-transform: uppercase;
+        color: #3d3f46;
+        background: #f5f5f5;
+        margin-top: 25rem;
+    }
+}
+.close-popups {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(61, 63, 70, 0.24);
+    width: 1000vw;
+    height: 100vh;
+    z-index: 11;
+    transition: all .4s ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+.cart-hero {
+    min-height: calc(100vh - 500rem);
+    .container {
+        display: flex;
+        gap: 60rem;
+    }
+    .cart-items {
+        width: 1017rem;
+        .top {
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15rem;
+            margin-bottom: 20rem;
+        }
+        .select-all {
+            display: flex;
+            align-items: center;
+            gap: 10rem;
+            input {
+                &:checked + .visual {
+                    background: #dba052;
+                    svg {
+                        opacity: 1;
+                    }
+                }
+
+            }
+            p {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                font-size: 16rem;
+                color: #3d3f46;
+            }
+
+            .visual {
+                width: 20rem;
+                height: 20rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .4s ease;
+                border: 1rem solid #c7cacf;
+                svg {
+                    opacity: 0;
+                    transition: all .4s ease;
+                }
+
+            }
+        }
+        .remove-selected {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            svg {
+                width: 18rem;
+            }
+            p {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                font-size: 14rem;
+                color: #3d3f46;
+            }
+        }
+
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 25rem;
+    }
+    .item {
+        display: flex;
+        border: 1rem solid #e9dbc8;
+        padding: 16rem;
+    }
+    .selected {
+        margin-right: 10rem;
+        input {
+            &:checked + .visual {
+                background: #dba052;
+                svg {
+                    opacity: 1;
+                }
+            }
+
+        }
+        .visual {
+            width: 20rem;
+            height: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .4s ease;
+            border: 1rem solid #c7cacf;
+            svg {
+                opacity: 0;
+                transition: all .4s ease;
+            }
+
+        }
+    }
+    .img {
+        margin-right: 20rem;
+        max-width: 100rem;
+        img {
+            width: 100%;
+        }
+    }
+    .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .infos-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18rem;
+    }
+    .infos-top-item {
+    }
+    .heading {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 15rem;
+        line-height: 125%;
+        color: #37393f;
+        margin-bottom: 2rem;
+    }
+    .text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 13rem;
+        line-height: 130%;
+        color: #878f99;
+    }
+    .price {
+        font-family: "Evolventa", sans-serif;
+        font-weight: 700;
+        font-size: 20rem;
+        line-height: 112%;
+        color: #3d3f46;
+        margin-bottom: 4rem;
+    }
+    .sale-prise {
+        font-family: "Evolventa", sans-serif;
+        font-weight: 400;
+        font-size: 14rem;
+        line-height: 120%;
+        text-decoration: line-through;
+        color: #929eba;
+        width: 100%;
+        text-align: right;
+        
+    }
+    .infos-btm {
+        background: #f5f5f5;
+        padding: 6rem 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .infos-btm-l {
+        display: flex;
+        align-items: center;
+        gap: 30rem;
+    }
+    .kol-vo {
+        display: flex;
+        align-items: center;
+        .heading {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 14rem;
+            line-height: 130%;
+            color: #3d3f46;
+            margin-right: 15rem;
+        }
+    }
+    .input {
+        display: flex;
+        align-items: center;
+        input {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 15rem;
+            line-height: 130%;
+            text-align: center;
+            color: #262628;
+            padding: 0 10rem;
+            width: fit-content;
+            max-width: 25rem;
+            background: none;
+        }
+        .minus {
+            cursor: pointer;
+        }
+        .pluss {
+            cursor: pointer;
+        }
+    }
+    .size {
+        display: flex;
+        align-items: center;
+        .heading {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 14rem;
+            line-height: 130%;
+            color: #3d3f46;
+            margin-right: 15rem;
+        }
+        .size-num {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 15rem;
+            line-height: 130%;
+            text-align: center;
+            color: #262628; 
+        }
+        svg {
+            width: 20rem;
+            margin-left: 4rem;
+        }
+    }
+    .infos-btm-r {
+    }
+    .infos-btm-delete {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 20rem;
+            margin-right: 5rem;
+        }
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 14rem;
+            color: #3d3f46;
+    }
+    .prises {
+        flex: 1;
+        .top-wrapper {
+            background: #f5f5f5;
+            padding: 16rem 24rem;
+
+        }
+        .itog {
+            margin-bottom: 30rem;
+            display: flex;
+            align-items: flex-end;
+            .heading {
+                font-family: "Evolventa", sans-serif;
+                font-weight: 700;
+                font-size: 18rem;
+                line-height: 145%;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: #3d3f46;
+            }
+            .line {
+                border-bottom: 1rem dashed #acb2b9;
+                flex: 1;
+            }
+            .num {
+                font-family: "Evolventa", sans-serif;
+                font-weight: 700;
+                font-size: 22rem;
+                line-height: 112%;
+                color: #3d3f46;
+            }
+        }
+        .summ {
+            margin-bottom: 8rem;
+        }
+        .top-wrapper-item {
+            display: flex;
+            align-items: flex-end;
+            .heading {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                font-size: 15rem;
+                line-height: 130%;
+                color: #3d3f46;
+            }
+            .num {
+                font-family: "Evolventa", sans-serif;
+                font-weight: 700;
+                font-size: 16rem;
+                line-height: 112%;
+                color: #3d3f46;
+
+            }
+            .line {
+                flex: 1;
+                border-bottom: 1rem dashed #acb2b9;
+            }
+        }
+        .border-btm {
+            padding-bottom: 24rem;
+            border-bottom: 1rem solid #acb2b9;
+            margin-bottom: 25rem;
+        }
+        .promokod {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1rem solid #dba052;
+            padding: 12rem;
+            margin-bottom: 50rem;
+            input {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                font-size: 15rem;
+                line-height: 130%;
+                color: #3d3f46;
+                border: none;
+                background: none;
+            }
+            label {
+            input {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                &:checked {
+                    & + .visual {
+                        &::after {
+                            left: calc(100% - 2rem);
+                            transform: translateX(-100%) translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .visual {
+                margin-left: 38rem;
+                border: 1.10rem solid #dfd9d5;
+                border-radius: 165rem;
+                width: 38rem;
+                height: 22rem;
+                background: #f8fafd;
+                position: relative;
+                transition: all .4s ease;
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 16rem;
+                    height: 16rem;
+                    background: #F0D3AC;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 2rem;
+                    transform: translateY(-50%);
+                    transition: all .2s ease;
+                }
+            }
+            }
+        }
+        .oformit {
+            padding: 10rem 62rem;
+            background: #3d3f46;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 13rem;
+            text-transform: uppercase;
+            color: #f8fafd;
+            width: 100%;
+            margin-bottom: 10rem;
+        }
+        .policy {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 12rem;
+            line-height: 130%;
+            color: #3d3f46;
+            a {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                font-size: 12rem;
+                line-height: 130%;
+                color: #3d3f46;
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+            }
+        }
+        .faq-wrapper {
+            padding: 16rem 24rem;
+            background: #f5f5f5;
+            .heading {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 16rem;
+                line-height: 145%;
+                letter-spacing: 0.02em;
+                color: #3d3f46;
+                margin-bottom: 10rem;
+            }
+        }
+        .faq-wrapper-item {
+            display: flex;
+            align-items: flex-end;
+            .line {
+                border-bottom: 1rem dashed #acb2b9;
+                flex: 1;
+            }
+            .heading {
+                display: flex;
+                align-items: center;
+                p {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    font-size: 14rem;
+                    line-height: 130%;
+                    color: #3d3f46;
+                }
+                svg {
+                    width: 20rem;
+                    margin-right: 8rem;
+                }
+            }
+            .text {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 15rem;
+                line-height: 112%;
+                color: #3d3f46;
+            }
+        }
     }
 }

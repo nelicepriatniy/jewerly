@@ -1142,7 +1142,7 @@ footer .footer-btm a {
 .catalog-hero .kol-vo-tov {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 15rem;
   color: #3d3f46;
 }
 .catalog-hero .sort-block {
@@ -1153,7 +1153,7 @@ footer .footer-btm a {
 .catalog-hero .sort-heading {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 15rem;
   color: #3d3f46;
 }
 .catalog-hero .select-item {
@@ -1214,13 +1214,13 @@ footer .footer-btm a {
   margin-top: 16rem;
 }
 .catalog-hero .tags .item {
-  border: 1px solid #c7cacf;
-  padding: 4px 12px;
+  border: 1rem solid #c7cacf;
+  padding: 4rem 12rem;
   background: white;
   transition: all 0.4s ease;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 15rem;
   text-align: center;
   color: #3d3f46;
   display: flex;
@@ -1369,7 +1369,7 @@ footer .footer-btm a {
   padding: 5rem 15rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 16rem;
   line-height: 138%;
   color: #2c343d;
   border-bottom: 1rem solid rgba(219, 160, 82, 0);
@@ -1447,7 +1447,7 @@ footer .footer-btm a {
 .card-hero .heading h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 22rem;
   line-height: 130%;
   color: #37393f;
 }
@@ -1455,7 +1455,7 @@ footer .footer-btm a {
   margin-top: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 14rem;
   line-height: 130%;
   color: #37393f;
 }
@@ -1463,14 +1463,14 @@ footer .footer-btm a {
   margin-top: 24rem;
   font-family: "Evolventa", sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 28rem;
   line-height: 112%;
   color: #3d3f46;
 }
 .card-hero .price span {
   font-family: "Evolventa", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 20rem;
   line-height: 120%;
   text-decoration: line-through;
   color: #929eba;
@@ -1484,13 +1484,13 @@ footer .footer-btm a {
 .card-hero .add-to-card {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px 0;
+  padding: 10rem 0;
   background: #3d3f46;
   width: 100%;
   max-width: 320rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 13rem;
   text-transform: uppercase;
   color: #f8fafd;
   display: flex;
@@ -1504,33 +1504,33 @@ footer .footer-btm a {
 .card-hero .buy-now {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 13rem;
   text-transform: uppercase;
   color: #3d3f46;
-  border: 1px solid #3d3f46;
-  padding: 10px 62px;
+  border: 1rem solid #3d3f46;
+  padding: 10rem 62rem;
   background: none;
 }
 .card-hero .dostavka {
   margin-top: 20rem;
   font-family: "Evolventa", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 14rem;
   line-height: 145%;
   text-transform: uppercase;
   color: #3d3f46;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0px;
+  padding: 10rem 0rem;
   background: #f5f5f5;
   gap: 10rem;
 }
 .card-hero .characts {
   padding: 25rem 0;
   margin: 30rem 0;
-  border-top: 1px solid #c7cacf;
-  border-bottom: 1px solid #c7cacf;
+  border-top: 1rem solid #c7cacf;
+  border-bottom: 1rem solid #c7cacf;
   display: flex;
   flex-direction: column;
   gap: 10rem;
@@ -1541,26 +1541,560 @@ footer .footer-btm a {
 }
 .card-hero .characts .item .line {
   flex: 1;
-  border-bottom: 1px dashed #acb2b9;
+  border-bottom: 1rem dashed #acb2b9;
 }
 .card-hero .characts_heading {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 15rem;
   line-height: 130%;
   color: #878f99;
 }
 .card-hero .characts_text {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 15rem;
   line-height: 130%;
   color: #262628;
 }
 .card-hero .deskription {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 14rem;
   line-height: 130%;
   color: #37393f;
+}
+
+.paymentPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  background: white;
+  padding: 35rem 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 12;
+}
+.paymentPopup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.paymentPopup .payment-popup-close {
+  position: absolute;
+  top: 15rem;
+  right: 15rem;
+  width: 20rem;
+  cursor: pointer;
+}
+.paymentPopup .heading {
+  font-family: "Evolventa", sans-serif;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 145%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #3d3f46;
+  width: 100%;
+  text-align: center;
+}
+.paymentPopup .row {
+  display: flex;
+  gap: 25rem;
+  margin-top: 25rem;
+}
+.paymentPopup .row .item {
+  padding: 10rem 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paymentPopup .row .item.applepay {
+  background: #007aff;
+}
+.paymentPopup .row .item.gpay {
+  background: #262628;
+}
+.paymentPopup .row .item.paypal {
+  background: #ffc439;
+}
+.paymentPopup .row.catds {
+  margin-top: 20rem;
+  gap: 12rem;
+  background: #f5f5f5;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.paymentPopup .or {
+  display: flex;
+  width: 100%;
+  margin-top: 30rem;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 25rem;
+}
+.paymentPopup .or p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #63656b;
+}
+.paymentPopup .or .line {
+  flex: 1;
+  height: 1rem;
+  background: #ACB2B9;
+}
+.paymentPopup .go-to-cart {
+  border: 1rem solid #3d3f46;
+  padding: 10rem 60rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13rem;
+  text-transform: uppercase;
+  color: #3d3f46;
+  background: #f5f5f5;
+  margin-top: 25rem;
+}
+
+.close-popups {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(61, 63, 70, 0.24);
+  width: 1000vw;
+  height: 100vh;
+  z-index: 11;
+  transition: all 0.4s ease;
+}
+.close-popups.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+label {
+  cursor: pointer;
+}
+
+.cart-hero {
+  min-height: calc(100vh - 500rem);
+}
+.cart-hero .container {
+  display: flex;
+  gap: 60rem;
+}
+.cart-hero .cart-items {
+  width: 1017rem;
+}
+.cart-hero .cart-items .top {
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15rem;
+  margin-bottom: 20rem;
+}
+.cart-hero .cart-items .select-all {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.cart-hero .cart-items .select-all input:checked + .visual {
+  background: #dba052;
+}
+.cart-hero .cart-items .select-all input:checked + .visual svg {
+  opacity: 1;
+}
+.cart-hero .cart-items .select-all p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16rem;
+  color: #3d3f46;
+}
+.cart-hero .cart-items .select-all .visual {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  border: 1rem solid #c7cacf;
+}
+.cart-hero .cart-items .select-all .visual svg {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.cart-hero .cart-items .remove-selected {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.cart-hero .cart-items .remove-selected svg {
+  width: 18rem;
+}
+.cart-hero .cart-items .remove-selected p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14rem;
+  color: #3d3f46;
+}
+.cart-hero .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25rem;
+}
+.cart-hero .item {
+  display: flex;
+  border: 1rem solid #e9dbc8;
+  padding: 16rem;
+}
+.cart-hero .selected {
+  margin-right: 10rem;
+}
+.cart-hero .selected input:checked + .visual {
+  background: #dba052;
+}
+.cart-hero .selected input:checked + .visual svg {
+  opacity: 1;
+}
+.cart-hero .selected .visual {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  border: 1rem solid #c7cacf;
+}
+.cart-hero .selected .visual svg {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.cart-hero .img {
+  margin-right: 20rem;
+  max-width: 100rem;
+}
+.cart-hero .img img {
+  width: 100%;
+}
+.cart-hero .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.cart-hero .infos-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18rem;
+}
+.cart-hero .heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15rem;
+  line-height: 125%;
+  color: #37393f;
+  margin-bottom: 2rem;
+}
+.cart-hero .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 13rem;
+  line-height: 130%;
+  color: #878f99;
+}
+.cart-hero .price {
+  font-family: "Evolventa", sans-serif;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 112%;
+  color: #3d3f46;
+  margin-bottom: 4rem;
+}
+.cart-hero .sale-prise {
+  font-family: "Evolventa", sans-serif;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 120%;
+  text-decoration: line-through;
+  color: #929eba;
+  width: 100%;
+  text-align: right;
+}
+.cart-hero .infos-btm {
+  background: #f5f5f5;
+  padding: 6rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+.cart-hero .infos-btm:last-child {
+  margin-bottom: 0;
+}
+.cart-hero .infos-btm-l {
+  display: flex;
+  align-items: center;
+  gap: 30rem;
+}
+.cart-hero .kol-vo {
+  display: flex;
+  align-items: center;
+}
+.cart-hero .kol-vo .heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 130%;
+  color: #3d3f46;
+  margin-right: 15rem;
+}
+.cart-hero .input {
+  display: flex;
+  align-items: center;
+}
+.cart-hero .input input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15rem;
+  line-height: 130%;
+  text-align: center;
+  color: #262628;
+  padding: 0 10rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 25rem;
+  background: none;
+}
+.cart-hero .input .minus {
+  cursor: pointer;
+}
+.cart-hero .input .pluss {
+  cursor: pointer;
+}
+.cart-hero .size {
+  display: flex;
+  align-items: center;
+}
+.cart-hero .size .heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 130%;
+  color: #3d3f46;
+  margin-right: 15rem;
+}
+.cart-hero .size .size-num {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15rem;
+  line-height: 130%;
+  text-align: center;
+  color: #262628;
+}
+.cart-hero .size svg {
+  width: 20rem;
+  margin-left: 4rem;
+}
+.cart-hero .infos-btm-delete {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14rem;
+  color: #3d3f46;
+}
+.cart-hero .infos-btm-delete svg {
+  width: 20rem;
+  margin-right: 5rem;
+}
+.cart-hero .prises {
+  flex: 1;
+}
+.cart-hero .prises .top-wrapper {
+  background: #f5f5f5;
+  padding: 16rem 24rem;
+}
+.cart-hero .prises .itog {
+  margin-bottom: 30rem;
+  display: flex;
+  align-items: flex-end;
+}
+.cart-hero .prises .itog .heading {
+  font-family: "Evolventa", sans-serif;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 145%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #3d3f46;
+}
+.cart-hero .prises .itog .line {
+  border-bottom: 1rem dashed #acb2b9;
+  flex: 1;
+}
+.cart-hero .prises .itog .num {
+  font-family: "Evolventa", sans-serif;
+  font-weight: 700;
+  font-size: 22rem;
+  line-height: 112%;
+  color: #3d3f46;
+}
+.cart-hero .prises .summ {
+  margin-bottom: 8rem;
+}
+.cart-hero .prises .top-wrapper-item {
+  display: flex;
+  align-items: flex-end;
+}
+.cart-hero .prises .top-wrapper-item .heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 15rem;
+  line-height: 130%;
+  color: #3d3f46;
+}
+.cart-hero .prises .top-wrapper-item .num {
+  font-family: "Evolventa", sans-serif;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 112%;
+  color: #3d3f46;
+}
+.cart-hero .prises .top-wrapper-item .line {
+  flex: 1;
+  border-bottom: 1rem dashed #acb2b9;
+}
+.cart-hero .prises .border-btm {
+  padding-bottom: 24rem;
+  border-bottom: 1rem solid #acb2b9;
+  margin-bottom: 25rem;
+}
+.cart-hero .prises .promokod {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1rem solid #dba052;
+  padding: 12rem;
+  margin-bottom: 50rem;
+}
+.cart-hero .prises .promokod input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 15rem;
+  line-height: 130%;
+  color: #3d3f46;
+  border: none;
+  background: none;
+}
+.cart-hero .prises .promokod label input {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.cart-hero .prises .promokod label input:checked + .visual::after {
+  left: calc(100% - 2rem);
+  transform: translateX(-100%) translateY(-50%);
+}
+.cart-hero .prises .promokod label .visual {
+  margin-left: 38rem;
+  border: 1.1rem solid #dfd9d5;
+  border-radius: 165rem;
+  width: 38rem;
+  height: 22rem;
+  background: #f8fafd;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.cart-hero .prises .promokod label .visual::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  background: #F0D3AC;
+  border-radius: 50%;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+.cart-hero .prises .oformit {
+  padding: 10rem 62rem;
+  background: #3d3f46;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13rem;
+  text-transform: uppercase;
+  color: #f8fafd;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+.cart-hero .prises .policy {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 130%;
+  color: #3d3f46;
+}
+.cart-hero .prises .policy a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 130%;
+  color: #3d3f46;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.cart-hero .prises .faq-wrapper {
+  padding: 16rem 24rem;
+  background: #f5f5f5;
+}
+.cart-hero .prises .faq-wrapper .heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16rem;
+  line-height: 145%;
+  letter-spacing: 0.02em;
+  color: #3d3f46;
+  margin-bottom: 10rem;
+}
+.cart-hero .prises .faq-wrapper-item {
+  display: flex;
+  align-items: flex-end;
+}
+.cart-hero .prises .faq-wrapper-item .line {
+  border-bottom: 1rem dashed #acb2b9;
+  flex: 1;
+}
+.cart-hero .prises .faq-wrapper-item .heading {
+  display: flex;
+  align-items: center;
+}
+.cart-hero .prises .faq-wrapper-item .heading p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 130%;
+  color: #3d3f46;
+}
+.cart-hero .prises .faq-wrapper-item .heading svg {
+  width: 20rem;
+  margin-right: 8rem;
+}
+.cart-hero .prises .faq-wrapper-item .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15rem;
+  line-height: 112%;
+  color: #3d3f46;
 }/*# sourceMappingURL=style.css.map */

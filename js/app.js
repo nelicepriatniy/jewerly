@@ -694,3 +694,26 @@ if (cardHero) {
     };
   });
 }
+
+
+//card buy now
+
+const cardBuyNowBtn = document.querySelector('.buy-now');
+
+if(cardBuyNowBtn) {
+  const boyNowPopup = document.querySelector('.paymentPopup')
+  const closePopups = document.querySelector('.close-popups')
+  const buyPopupCloseBtn = boyNowPopup.querySelector('.payment-popup-close')
+  cardBuyNowBtn.onclick = ()=>{
+    boyNowPopup.classList.add('active');
+    closePopups.classList.add('active');
+  }
+  buyPopupCloseBtn.onclick = ()=>{
+    boyNowPopup.classList.remove('active');
+    closePopups.classList.remove('active');
+  }
+  closePopups.onclick = ()=>{
+    boyNowPopup.classList.remove('active');
+    closePopups.classList.remove('active');
+  }
+}

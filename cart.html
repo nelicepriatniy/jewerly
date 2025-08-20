@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="./catalog.html">
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.33333 3.5H3.88889C3.39797 3.5 3 3.89797 3 4.38889V8.83333C3 9.32425 3.39797 9.72222 3.88889 9.72222H8.33333C8.82425 9.72222 9.22222 9.32425 9.22222 8.83333V4.38889C9.22222 3.89797 8.82425 3.5 8.33333 3.5Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M18.1111 3.5H13.6667C13.1757 3.5 12.7778 3.89797 12.7778 4.38889V8.83333C12.7778 9.32425 13.1757 9.72222 13.6667 9.72222H18.1111C18.602 9.72222 19 9.32425 19 8.83333V4.38889C19 3.89797 18.602 3.5 18.1111 3.5Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M18.1111 13.2778H13.6667C13.1757 13.2778 12.7778 13.6757 12.7778 14.1667V18.6111C12.7778 19.102 13.1757 19.5 13.6667 19.5H18.1111C18.602 19.5 19 19.102 19 18.6111V14.1667C19 13.6757 18.602 13.2778 18.1111 13.2778Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.33333 13.2778H3.88889C3.39797 13.2778 3 13.6757 3 14.1667V18.6111C3 19.102 3.39797 19.5 3.88889 19.5H8.33333C8.82425 19.5 9.22222 19.102 9.22222 18.6111V14.1667C9.22222 13.6757 8.82425 13.2778 8.33333 13.2778Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    каталог
+                </a>
+                <a href="" class="line">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.66589 12.8334C3.49242 12.834 3.32235 12.7854 3.17543 12.6932C3.02851 12.601 2.91077 12.4689 2.83589 12.3125C2.76101 12.156 2.73207 11.9815 2.75243 11.8092C2.77278 11.6369 2.8416 11.474 2.95089 11.3393L12.0259 1.98928C12.094 1.9107 12.1867 1.8576 12.289 1.8387C12.3912 1.81979 12.4968 1.8362 12.5885 1.88524C12.6801 1.93427 12.7524 2.01301 12.7934 2.10854C12.8345 2.20407 12.8418 2.3107 12.8142 2.41094L11.0542 7.92927C11.0023 8.06817 10.9849 8.21759 11.0034 8.3647C11.022 8.51181 11.0759 8.65223 11.1606 8.77392C11.2454 8.8956 11.3583 8.99491 11.4899 9.06334C11.6214 9.13176 11.7676 9.16726 11.9159 9.16678H18.3326C18.506 9.16618 18.6761 9.21482 18.823 9.30705C18.9699 9.39927 19.0877 9.53128 19.1626 9.68776C19.2374 9.84423 19.2664 10.0187 19.246 10.191C19.2257 10.3633 19.1568 10.5262 19.0476 10.6609L9.97255 20.0109C9.90448 20.0895 9.81172 20.1426 9.70949 20.1615C9.60726 20.1804 9.50164 20.164 9.40997 20.115C9.3183 20.0659 9.24602 19.9872 9.205 19.8917C9.16397 19.7961 9.15665 19.6895 9.18422 19.5893L10.9442 14.0709C10.9961 13.932 11.0135 13.7826 10.995 13.6355C10.9765 13.4884 10.9225 13.348 10.8378 13.2263C10.7531 13.1046 10.6401 13.0053 10.5086 12.9369C10.377 12.8685 10.2308 12.833 10.0826 12.8334H3.66589Z" stroke="#DBA052" stroke-width="1.54" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Акция
+                </a>
+                <a href="">Доставка и оплата</a>
+                <a href="">Контакты</a>
+            </nav>
+            <a href="/" class="logo">
+                <img src="./media/icons/LOGO.svg" alt="header logo">
+            </a>
+            <nav class="header-nav">
+                <div class="header-search">
+                    <a class="header-search-top">
+                        <svg class="search-loop" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.25 19.25L15.2717 15.2717M17.4167 10.0833C17.4167 14.1334 14.1334 17.4167 10.0833 17.4167C6.03325 17.4167 2.75 14.1334 2.75 10.0833C2.75 6.03325 6.03325 2.75 10.0833 2.75C14.1334 2.75 17.4167 6.03325 17.4167 10.0833Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <input type="text" placeholder="Поиск">
+                        <div class="header-search-inp-r">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4L4 12M4 4L12 12" stroke="#878F99" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <button>ОК</button>
+                        </div>
+                    </a>
+                </div>
+                <a class="line openCard header-card">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.6667 9.16658C14.6667 10.139 14.2804 11.0717 13.5927 11.7593C12.9051 12.4469 11.9725 12.8333 11 12.8333C10.0275 12.8333 9.09491 12.4469 8.40728 11.7593C7.71964 11.0717 7.33333 10.139 7.33333 9.16658M2.84442 5.53109H19.1556M3.11667 5.01134C2.87866 5.32868 2.75 5.71466 2.75 6.11133V18.3333C2.75 18.8195 2.94315 19.2858 3.28697 19.6296C3.63079 19.9734 4.0971 20.1666 4.58333 20.1666H17.4167C17.9029 20.1666 18.3692 19.9734 18.713 19.6296C19.0568 19.2858 19.25 18.8195 19.25 18.3333V6.11133C19.25 5.71466 19.1213 5.32868 18.8833 5.01134L17.05 2.56659C16.8792 2.33889 16.6578 2.15409 16.4032 2.0268C16.1487 1.89952 15.8679 1.83325 15.5833 1.83325H6.41667C6.13205 1.83325 5.85134 1.89952 5.59678 2.0268C5.34221 2.15409 5.12077 2.33889 4.95 2.56659L3.11667 5.01134Z" stroke="#DBA052" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Корзина
+                </a>
+                <div class="volute select-item">
+                    <div class="select-item-top">
+                        <p>RUB, ₽</p>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.06804 8.61674C5.94634 8.73409 5.78131 8.8 5.60924 8.8C5.43716 8.8 5.27213 8.73409 5.15043 8.61674L1.47936 5.07609C1.41739 5.01836 1.36795 4.94929 1.33394 4.87293C1.29993 4.79656 1.28202 4.71444 1.28127 4.63133C1.28053 4.54822 1.29695 4.4658 1.32958 4.38888C1.3622 4.31196 1.41039 4.24209 1.47132 4.18331C1.53225 4.12455 1.60471 4.07808 1.68446 4.04661C1.76421 4.01513 1.84967 3.9993 1.93583 4.00002C2.02199 4.00075 2.10715 4.01801 2.18633 4.05082C2.2655 4.08361 2.33711 4.13129 2.39697 4.19108L5.60924 7.28925L8.82146 4.19108C8.94391 4.07706 9.10784 4.01397 9.27799 4.0154C9.44814 4.01683 9.6109 4.08265 9.73121 4.1987C9.85153 4.31474 9.91976 4.47173 9.92122 4.63584C9.92278 4.79994 9.85737 4.95805 9.7391 5.07609L6.06804 8.61674Z" fill="#3D3F46" />
+                        </svg>
+                    </div>
+                    <div class="select-item-btn">
+                        <p>EUR, E</p>
+                        <p>DOL, $</p>
+                    </div>
+                </div>
+                <div class="lang select-item">
+                    <div class="select-item-top">
+                        <p>RU</p>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.06804 8.61674C5.94634 8.73409 5.78131 8.8 5.60924 8.8C5.43716 8.8 5.27213 8.73409 5.15043 8.61674L1.47936 5.07609C1.41739 5.01836 1.36795 4.94929 1.33394 4.87293C1.29993 4.79656 1.28202 4.71444 1.28127 4.63133C1.28053 4.54822 1.29695 4.4658 1.32958 4.38888C1.3622 4.31196 1.41039 4.24209 1.47132 4.18331C1.53225 4.12455 1.60471 4.07808 1.68446 4.04661C1.76421 4.01513 1.84967 3.9993 1.93583 4.00002C2.02199 4.00075 2.10715 4.01801 2.18633 4.05082C2.2655 4.08361 2.33711 4.13129 2.39697 4.19108L5.60924 7.28925L8.82146 4.19108C8.94391 4.07706 9.10784 4.01397 9.27799 4.0154C9.44814 4.01683 9.6109 4.08265 9.73121 4.1987C9.85153 4.31474 9.91976 4.47173 9.92122 4.63584C9.92278 4.79994 9.85737 4.95805 9.7391 5.07609L6.06804 8.61674Z" fill="#3D3F46" />
+                        </svg>
+                    </div>
+                    <div class="select-item-btn">
+                        <p>EU</p>
+                        <p>EN</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="card">
+        <div class="card-close closeCard">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.5 5.5L5.5 16.5M5.5 5.5L16.5 16.5" stroke="#465767" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="card-heading">Товар добавлен в корзину</div>
+        <div class="wrapper">
+        </div>
+        <div class="itog">
+            <p class="kol-tov">2 товара</p>
+            <div class="row"><p class="summ">Сумма заказа:</p> <div class="line"></div><p class="sum-num" data-sum="15 380">15 380 ₽</p></div>
+        </div>
+        <div class="buttons">
+            <button class="go-to-card">Перейти к оформлению</button>
+            <button class="close-card closeCard">Продолжить покупки</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="bred-crumbs">
+            <div class="container">
+                <div class="slash">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.729077 6.58346C0.582383 6.43134 0.499999 6.22505 0.499999 6.00996C0.499999 5.79486 0.582383 5.58857 0.729077 5.43645L5.15489 0.847619C5.22705 0.770147 5.31339 0.708347 5.40884 0.665833C5.50429 0.62332 5.60696 0.600943 5.71084 0.600006C5.81472 0.599069 5.91775 0.619596 6.0139 0.660382C6.11005 0.701168 6.19739 0.761398 6.27086 0.837568C6.34431 0.913726 6.4024 1.0043 6.44174 1.10399C6.48109 1.20368 6.50087 1.3105 6.49997 1.4182C6.49907 1.52591 6.47749 1.63235 6.43648 1.73132C6.39549 1.83029 6.33588 1.9198 6.26115 1.99463L2.38843 6.00996L6.26115 10.0252C6.40367 10.1783 6.48253 10.3832 6.48075 10.5959C6.47896 10.8086 6.39669 11.012 6.25162 11.1624C6.10657 11.3128 5.91034 11.3981 5.70521 11.3999C5.50007 11.4019 5.30244 11.3201 5.15489 11.1723L0.729077 6.58346Z" fill="#DBA052" />
+                    </svg>
+                </div>
+                <a href="./index.html" class="link">Вернуться к каталогу</a>
+            </div>
+        </div>
+
+        <div class="cart-hero">
+            <div class="container">
+                <div class="cart-items">
+                    <div class="top">
+                        <label class="select-all">
+                            <input type="checkbox" hidden>
+                            <div class="visual">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4H9" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p>Выбрать все</p>
+                        </label>
+                        <label class="remove-selected">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 8.25V12.75M10.5 8.25V12.75M14.25 4.5V15C14.25 15.3978 14.092 15.7794 13.8107 16.0607C13.5294 16.342 13.1478 16.5 12.75 16.5H5.25C4.85218 16.5 4.47064 16.342 4.18934 16.0607C3.90804 15.7794 3.75 15.3978 3.75 15V4.5M2.25 4.5H15.75M6 4.5V3C6 2.60218 6.15804 2.22064 6.43934 1.93934C6.72064 1.65804 7.10218 1.5 7.5 1.5H10.5C10.8978 1.5 11.2794 1.65804 11.5607 1.93934C11.842 2.22064 12 2.60218 12 3V4.5" stroke="#FF582F" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>Удалить выбранные</p>
+                        </label>
+                    </div>
+                    <div class="wrapper">
+                        <div class="item">
+                            <label class="selected">
+                                <input type="checkbox" hidden>
+                                <div class="visual">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_5126_9683)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.6501 0.531222C9.85071 0.761793 9.85071 1.10495 9.6501 1.33552L4.60593 7.13293C4.20731 7.59107 3.49571 7.59107 3.0971 7.13293L0.3499 3.9755C0.149286 3.74493 0.149286 3.40177 0.3499 3.1712C0.594116 2.89051 1.03009 2.89051 1.27431 3.1712L3.85151 6.13326L8.72569 0.531222C8.96991 0.250538 9.40588 0.250538 9.6501 0.531222Z" fill="white" />
+                                    </g>
+                                    </svg>
+                                </div>
+                            </label>
+                            <div class="img">
+                                <img src="./media/imgs/bgs/k1.png" alt="">
+                            </div>
+                            <div class="infos">
+                                <div class="infos-top">
+                                    <div class="infos-top-item">
+                                        <p class="heading">Название изделия-1</p>
+                                        <p class="text">Артикул: 102030</p>
+                                    </div>
+                                    <div class="infos-top-item">
+                                        <p class="price">8 190 ₽</p>
+                                        <p class="sale-prise">12 190 ₽</p>
+                                    </div>
+                                </div>
+                                <div class="infos-btm">
+                                    <div class="infos-btm-l">
+                                        <div class="kol-vo">
+                                            <p class="heading">Количество:</p>
+                                            <div class="input">
+                                                <div class="minus">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 9H13.908" stroke="#ACB2B9" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <input type="text" value="1">
+                                                <div class="pluss">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 8.99991H13.908M8.99893 4.09082V13.909" stroke="#878F99" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="size">
+                                            <p class="heading">Размер:</p>
+                                            <p class="size-num">35</p>
+                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.3565 3.84517L11.5364 6.20502M12.8176 4.46704C13.1295 4.04682 13.2617 3.5199 13.1851 3.00219C13.1086 2.48448 12.8295 2.01839 12.4093 1.70646C11.989 1.39453 11.4621 1.2623 10.9444 1.33887C10.4267 1.41545 9.9606 1.69454 9.64867 2.11476L1.77535 12.7266C1.6383 12.9107 1.54862 13.1257 1.5142 13.3526L1.04556 16.5017C1.03653 16.5642 1.04459 16.628 1.0689 16.6863C1.09321 16.7447 1.13285 16.7953 1.18362 16.8329C1.23439 16.8705 1.29439 16.8937 1.35726 16.9C1.42014 16.9062 1.48353 16.8954 1.54073 16.8685L4.41974 15.5082C4.62683 15.4102 4.8067 15.2628 4.94354 15.079L12.8176 4.46704Z" stroke="#ACB2B9" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="infos-btm-r">
+                                        <div class="infos-btm-delete">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 8.25V12.75M10.5 8.25V12.75M14.25 4.5V15C14.25 15.3978 14.092 15.7794 13.8107 16.0607C13.5294 16.342 13.1478 16.5 12.75 16.5H5.25C4.85218 16.5 4.47064 16.342 4.18934 16.0607C3.90804 15.7794 3.75 15.3978 3.75 15V4.5M2.25 4.5H15.75M6 4.5V3C6 2.60218 6.15804 2.22064 6.43934 1.93934C6.72064 1.65804 7.10218 1.5 7.5 1.5H10.5C10.8978 1.5 11.2794 1.65804 11.5607 1.93934C11.842 2.22064 12 2.60218 12 3V4.5" stroke="#FF582F" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Удалить
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label class="selected">
+                                <input type="checkbox" hidden>
+                                <div class="visual">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_5126_9683)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.6501 0.531222C9.85071 0.761793 9.85071 1.10495 9.6501 1.33552L4.60593 7.13293C4.20731 7.59107 3.49571 7.59107 3.0971 7.13293L0.3499 3.9755C0.149286 3.74493 0.149286 3.40177 0.3499 3.1712C0.594116 2.89051 1.03009 2.89051 1.27431 3.1712L3.85151 6.13326L8.72569 0.531222C8.96991 0.250538 9.40588 0.250538 9.6501 0.531222Z" fill="white" />
+                                    </g>
+                                    </svg>
+                                </div>
+                            </label>
+                            <div class="img">
+                                <img src="./media/imgs/bgs/k1.png" alt="">
+                            </div>
+                            <div class="infos">
+                                <div class="infos-top">
+                                    <div class="infos-top-item">
+                                        <p class="heading">Название изделия-1</p>
+                                        <p class="text">Артикул: 102030</p>
+                                    </div>
+                                    <div class="infos-top-item">
+                                        <p class="price">8 190 ₽</p>
+                                        <p class="sale-prise">12 190 ₽</p>
+                                    </div>
+                                </div>
+                                <div class="infos-btm">
+                                    <div class="infos-btm-l">
+                                        <div class="kol-vo">
+                                            <p class="heading">Количество:</p>
+                                            <div class="input">
+                                                <div class="minus">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 9H13.908" stroke="#ACB2B9" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <input type="text" value="1">
+                                                <div class="pluss">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 8.99991H13.908M8.99893 4.09082V13.909" stroke="#878F99" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="size">
+                                            <p class="heading">Размер:</p>
+                                            <p class="size-num">35</p>
+                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.3565 3.84517L11.5364 6.20502M12.8176 4.46704C13.1295 4.04682 13.2617 3.5199 13.1851 3.00219C13.1086 2.48448 12.8295 2.01839 12.4093 1.70646C11.989 1.39453 11.4621 1.2623 10.9444 1.33887C10.4267 1.41545 9.9606 1.69454 9.64867 2.11476L1.77535 12.7266C1.6383 12.9107 1.54862 13.1257 1.5142 13.3526L1.04556 16.5017C1.03653 16.5642 1.04459 16.628 1.0689 16.6863C1.09321 16.7447 1.13285 16.7953 1.18362 16.8329C1.23439 16.8705 1.29439 16.8937 1.35726 16.9C1.42014 16.9062 1.48353 16.8954 1.54073 16.8685L4.41974 15.5082C4.62683 15.4102 4.8067 15.2628 4.94354 15.079L12.8176 4.46704Z" stroke="#ACB2B9" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="infos-btm-r">
+                                        <div class="infos-btm-delete">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 8.25V12.75M10.5 8.25V12.75M14.25 4.5V15C14.25 15.3978 14.092 15.7794 13.8107 16.0607C13.5294 16.342 13.1478 16.5 12.75 16.5H5.25C4.85218 16.5 4.47064 16.342 4.18934 16.0607C3.90804 15.7794 3.75 15.3978 3.75 15V4.5M2.25 4.5H15.75M6 4.5V3C6 2.60218 6.15804 2.22064 6.43934 1.93934C6.72064 1.65804 7.10218 1.5 7.5 1.5H10.5C10.8978 1.5 11.2794 1.65804 11.5607 1.93934C11.842 2.22064 12 2.60218 12 3V4.5" stroke="#FF582F" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Удалить
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infos-btm">
+                                    <div class="infos-btm-l">
+                                        <div class="kol-vo">
+                                            <p class="heading">Количество:</p>
+                                            <div class="input">
+                                                <div class="minus">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 9H13.908" stroke="#ACB2B9" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <input type="text" value="1">
+                                                <div class="pluss">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 8.99991H13.908M8.99893 4.09082V13.909" stroke="#878F99" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="size">
+                                            <p class="heading">Размер:</p>
+                                            <p class="size-num">35</p>
+                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.3565 3.84517L11.5364 6.20502M12.8176 4.46704C13.1295 4.04682 13.2617 3.5199 13.1851 3.00219C13.1086 2.48448 12.8295 2.01839 12.4093 1.70646C11.989 1.39453 11.4621 1.2623 10.9444 1.33887C10.4267 1.41545 9.9606 1.69454 9.64867 2.11476L1.77535 12.7266C1.6383 12.9107 1.54862 13.1257 1.5142 13.3526L1.04556 16.5017C1.03653 16.5642 1.04459 16.628 1.0689 16.6863C1.09321 16.7447 1.13285 16.7953 1.18362 16.8329C1.23439 16.8705 1.29439 16.8937 1.35726 16.9C1.42014 16.9062 1.48353 16.8954 1.54073 16.8685L4.41974 15.5082C4.62683 15.4102 4.8067 15.2628 4.94354 15.079L12.8176 4.46704Z" stroke="#ACB2B9" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="infos-btm-r">
+                                        <div class="infos-btm-delete">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 8.25V12.75M10.5 8.25V12.75M14.25 4.5V15C14.25 15.3978 14.092 15.7794 13.8107 16.0607C13.5294 16.342 13.1478 16.5 12.75 16.5H5.25C4.85218 16.5 4.47064 16.342 4.18934 16.0607C3.90804 15.7794 3.75 15.3978 3.75 15V4.5M2.25 4.5H15.75M6 4.5V3C6 2.60218 6.15804 2.22064 6.43934 1.93934C6.72064 1.65804 7.10218 1.5 7.5 1.5H10.5C10.8978 1.5 11.2794 1.65804 11.5607 1.93934C11.842 2.22064 12 2.60218 12 3V4.5" stroke="#FF582F" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Удалить
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label class="selected">
+                                <input type="checkbox" hidden>
+                                <div class="visual">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_5126_9683)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.6501 0.531222C9.85071 0.761793 9.85071 1.10495 9.6501 1.33552L4.60593 7.13293C4.20731 7.59107 3.49571 7.59107 3.0971 7.13293L0.3499 3.9755C0.149286 3.74493 0.149286 3.40177 0.3499 3.1712C0.594116 2.89051 1.03009 2.89051 1.27431 3.1712L3.85151 6.13326L8.72569 0.531222C8.96991 0.250538 9.40588 0.250538 9.6501 0.531222Z" fill="white" />
+                                    </g>
+                                    </svg>
+                                </div>
+                            </label>
+                            <div class="img">
+                                <img src="./media/imgs/bgs/k1.png" alt="">
+                            </div>
+                            <div class="infos">
+                                <div class="infos-top">
+                                    <div class="infos-top-item">
+                                        <p class="heading">Название изделия-1</p>
+                                        <p class="text">Артикул: 102030</p>
+                                    </div>
+                                    <div class="infos-top-item">
+                                        <p class="price">8 190 ₽</p>
+                                        <p class="sale-prise">12 190 ₽</p>
+                                    </div>
+                                </div>
+                                <div class="infos-btm">
+                                    <div class="infos-btm-l">
+                                        <div class="kol-vo">
+                                            <p class="heading">Количество:</p>
+                                            <div class="input">
+                                                <div class="minus">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 9H13.908" stroke="#ACB2B9" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <input type="text" value="1">
+                                                <div class="pluss">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.08984 8.99991H13.908M8.99893 4.09082V13.909" stroke="#878F99" stroke-width="1.47273" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="size">
+                                            <p class="heading">Размер:</p>
+                                            <p class="size-num">35</p>
+                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.3565 3.84517L11.5364 6.20502M12.8176 4.46704C13.1295 4.04682 13.2617 3.5199 13.1851 3.00219C13.1086 2.48448 12.8295 2.01839 12.4093 1.70646C11.989 1.39453 11.4621 1.2623 10.9444 1.33887C10.4267 1.41545 9.9606 1.69454 9.64867 2.11476L1.77535 12.7266C1.6383 12.9107 1.54862 13.1257 1.5142 13.3526L1.04556 16.5017C1.03653 16.5642 1.04459 16.628 1.0689 16.6863C1.09321 16.7447 1.13285 16.7953 1.18362 16.8329C1.23439 16.8705 1.29439 16.8937 1.35726 16.9C1.42014 16.9062 1.48353 16.8954 1.54073 16.8685L4.41974 15.5082C4.62683 15.4102 4.8067 15.2628 4.94354 15.079L12.8176 4.46704Z" stroke="#ACB2B9" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="infos-btm-r">
+                                        <div class="infos-btm-delete">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 8.25V12.75M10.5 8.25V12.75M14.25 4.5V15C14.25 15.3978 14.092 15.7794 13.8107 16.0607C13.5294 16.342 13.1478 16.5 12.75 16.5H5.25C4.85218 16.5 4.47064 16.342 4.18934 16.0607C3.90804 15.7794 3.75 15.3978 3.75 15V4.5M2.25 4.5H15.75M6 4.5V3C6 2.60218 6.15804 2.22064 6.43934 1.93934C6.72064 1.65804 7.10218 1.5 7.5 1.5H10.5C10.8978 1.5 11.2794 1.65804 11.5607 1.93934C11.842 2.22064 12 2.60218 12 3V4.5" stroke="#FF582F" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Удалить
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prises">
+                    <div class="top-wrapper">
+                        <div class="itog">
+                            <p class="heading">Итого к оплате:</p>
+                            <div class="line"></div>
+                            <p class="num">15 380 ₽</p>
+                        </div>
+                        <div class="summ top-wrapper-item">
+                            <p class="heading">Сумма за 2 товара</p>
+                            <div class="line"></div>
+                            <div class="num">24 380 ₽</div>
+                        </div>
+                        <div class="summ top-wrapper-item border-btm">
+                            <p class="heading">Скидка</p>
+                            <div class="line"></div>
+                            <div class="num">- 9 000 ₽</div>
+                        </div>
+                        <div class="promokod">
+                            <input type="text" placeholder="Введите промокод">
+                            <label>
+                                <input type="checkbox" name="akcia" hidden>
+                                <div class="visual"></div>
+                            </label>
+                        </div>
+                        <button class="oformit">Оформить заказ</button>
+                        <p class="policy">Нажимая «Оформить заказ», Вы соглашайтесь на <a href="">обработку и передачу своих персональных данных</a> и принимаете условия «Положения об обработке и защите персональных данных покупателей (клиентов)», а также подтверждаете своё согласие с «Публичной офертой».</p>
+                    </div>
+                    <div class="faq-wrapper">
+                        <p class="heading">Ответим на вопросы по заказу</p>
+                        <div class="faq-wrapper-item">
+                            <div class="heading">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0833 2C14.2714 2 16.3698 2.86919 17.917 4.41637C19.4641 5.96354 20.3333 8.06196 20.3333 10.25M12.0833 5.66667C13.2989 5.66667 14.4647 6.14955 15.3242 7.00909C16.1838 7.86864 16.6667 9.03442 16.6667 10.25M12.846 15.354C13.0353 15.4409 13.2486 15.4608 13.4507 15.4103C13.6528 15.3598 13.8317 15.242 13.9579 15.0762L14.2833 14.65C14.4541 14.4223 14.6755 14.2375 14.9301 14.1102C15.1847 13.9829 15.4654 13.9167 15.75 13.9167H18.5C18.9862 13.9167 19.4525 14.1098 19.7964 14.4536C20.1402 14.7975 20.3333 15.2638 20.3333 15.75V18.5C20.3333 18.9862 20.1402 19.4525 19.7964 19.7964C19.4525 20.1402 18.9862 20.3333 18.5 20.3333C14.1239 20.3333 9.92709 18.5949 6.83274 15.5006C3.73839 12.4062 2 8.20941 2 3.83333C2 3.3471 2.19315 2.88079 2.53697 2.53697C2.88079 2.19315 3.3471 2 3.83333 2H6.58333C7.06956 2 7.53588 2.19315 7.8797 2.53697C8.22351 2.88079 8.41667 3.3471 8.41667 3.83333V6.58333C8.41667 6.86795 8.3504 7.14866 8.22312 7.40323C8.09583 7.65779 7.91103 7.87923 7.68333 8.05L7.25433 8.37175C7.08605 8.50025 6.96743 8.68304 6.91864 8.88907C6.86985 9.09511 6.89388 9.31168 6.98667 9.502C8.23946 12.0465 10.2999 14.1044 12.846 15.354Z" stroke="#ACB2B9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Позвоните нам</p>
+                            </div>
+                            <div class="line"></div>
+                            <p class="text">+1 123 456-78-90</p>
+                        </div>
+                        <div class="faq-wrapper-item">
+                            <div class="heading">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.3333 6.75L12.0916 11.9998C11.8119 12.1622 11.4942 12.2478 11.1708 12.2478C10.8474 12.2478 10.5297 12.1622 10.25 11.9998L2 6.75M3.83333 4H18.5C19.5125 4 20.3333 4.82081 20.3333 5.83333V16.8333C20.3333 17.8459 19.5125 18.6667 18.5 18.6667H3.83333C2.82081 18.6667 2 17.8459 2 16.8333V5.83333C2 4.82081 2.82081 4 3.83333 4Z" stroke="#ACB2B9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Напишите нам</p>
+                            </div>
+                            <div class="line"></div>
+                            <p class="text">juicygems@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-item">
+                    <p class="item-heading">Каталог</p>
+                    <ul>
+                        <a href="">Кольца</a>
+                        <a href="">Браслеты</a>
+                        <a href="">Цепи</a>
+                        <a href="">Подвески</a>
+                        <a href="">Серьги</a>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <p class="item-heading">Популярные изделия</p>
+                    <ul>
+                        <a href="">Название комплекта-1</a>
+                        <a href="">Название комплекта-2</a>
+                        <a href="">Название комплекта-3</a>
+                        <a href="">Название комплекта-4</a>
+                        <a href="">Название комплекта-5</a>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <p class="item-heading">О компании</p>
+                    <ul>
+                        <a href="">Корзина</a>
+                        <a href="">Доставка и оплата</a>
+                        <a href="">О компании</a>
+                        <a href="">Услуги</a>
+                        <a href="">Контакты</a>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <p class="item-heading">Свяжитесь с нами!</p>
+                    <a href="" class="num">+1 123 456-78-90</a>
+                    <a href="" class="catalog">Перейти в каталог</a>
+                </div>
+            </div>
+            <div class="footer-mid">
+                <a href="" class="logo">
+                    <img src="./media/icons/LOGO.svg" alt="">
+                </a>
+                <p class="policy">© 2025 Juicy Gems Jewellery – производитель ювелирных украшений. Все права защищены.</p>
+            </div>
+        </div>
+        <div class="footer-btm">
+            <div class="container">
+                <a href="">Политика конфиденциальности</a>
+                <a href="">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="closePupups closeCard"></div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
