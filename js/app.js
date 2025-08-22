@@ -717,3 +717,38 @@ if(cardBuyNowBtn) {
     closePopups.classList.remove('active');
   }
 }
+
+//mob
+
+
+//mob menu
+
+const mobMenuBtn = document.querySelector('.header-mob-menu-btn')
+const headerMobMenu = document.querySelector('.header-mob-menu')
+
+if(headerMobMenu && headerMobMenu) {
+  mobMenuBtn.onclick = ()=>{
+    headerMobMenu.classList.toggle('active');
+  }
+}
+
+//filter menu active
+
+const filterBlock = document.querySelector('.catalog-hero .filters');
+
+if(filterBlock) {
+  const filterOpenBtns = document.querySelectorAll('.openMobFilters');
+  const filterCloseBtns = document.querySelectorAll('.closeMobFilters');
+  console.log(filterOpenBtns);
+  
+  filterOpenBtns.forEach((el)=>{
+    el.onclick = ()=>{
+      filterBlock.classList.add('active')
+    }
+  })
+  filterCloseBtns.forEach((el)=>{
+    el.onclick = ()=>{
+      filterBlock.classList.remove('active')
+    }
+  })
+}
