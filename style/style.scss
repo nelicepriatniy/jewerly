@@ -3869,4 +3869,43 @@ label {
         .nal {
         }
     }
+
+    .card {
+        width: 100vw;
+        padding: 25rem 12rem;
+        height: fit-content;
+        bottom: 0;
+        top: auto;
+        .active {
+        }
+        .card-close {
+        }
+        .closeCard {
+        }
+        .card-heading {
+        }
+        .wrapper {
+            max-height: 400rem;
+            overflow-y: scroll;
+        }
+        .itog {
+        }
+        .kol-tov {
+        }
+        .row {
+        }
+        .summ {
+        }
+        .line {
+        }
+        .sum-num {
+        }
+        .buttons {
+        }
+        .go-to-card {
+        }
+        .close-card {
+            display: none;
+        }
+    }
 }

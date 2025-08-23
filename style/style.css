@@ -3451,4 +3451,19 @@ label {
     margin: 0;
     padding: 0;
   }
+  .card {
+    width: 100vw;
+    padding: 25rem 12rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    bottom: 0;
+    top: auto;
+  }
+  .card .wrapper {
+    max-height: 400rem;
+    overflow-y: scroll;
+  }
+  .card .close-card {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

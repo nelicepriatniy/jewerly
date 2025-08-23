@@ -294,7 +294,7 @@ const card = new Card({ cardClass: ".card", items: cardItems });
 
 card.drawItems();
 
-const cardOpener = document.querySelectorAll(".openCard");
+const cardOpener = document.querySelectorAll(".openCard, .header-mob-cart");
 cardOpener.forEach((el) => {
   el.onclick = () => {
     card.open();
